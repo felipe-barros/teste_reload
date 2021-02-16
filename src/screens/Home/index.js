@@ -63,7 +63,7 @@ function Home() {
                 ) : (
                         <View style={style.sectionContent}>
                             <Button
-                                title='Abrir calendário'
+                                title='Open calendar'
                                 onPress={onTouchOpenCalendar}
                                 containerStyle={{ width: '60%' }} />
                         </View>
