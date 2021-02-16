@@ -8,6 +8,8 @@ target 'teste_reload' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'teste_reloadTests' do
     inherit! :complete
     # Pods for testing
