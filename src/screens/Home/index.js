@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
+import Header from '../../components/Header';
+import style from './style';
 
 function Home(){
     return (
-        <View>
-
+        <View style={style.container}>
+            <Header />
         </View>
     )
 }
