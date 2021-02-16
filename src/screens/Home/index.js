@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Image, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Image, TouchableOpacity, Alert } from 'react-native';
+import Text from '../../components/pText';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import CalendarModal from '../../components/CalendarModal';
@@ -31,6 +32,14 @@ function Home() {
     // Ao tocar em abrir calendário
     function onTouchOpenCalendar() {
         setIsModalVisible(true);
+    }
+
+    // Ao tocar no botão de Apply no calendário
+    function onSubmitApply(date) {
+        if (date == '')
+            Alert.alert("Nenhuma data selecionada.", `Selecione uma data.`);
+        else
+            Alert.alert("Data selecionada.", `Você selecionou uma data: ${date}`);
     }
 
     return (
@@ -73,7 +82,10 @@ function Home() {
                         )
                 }
             </View>
-            <CalendarModal isVisible={isModalVisible} onDismiss={() => setIsModalVisible(!isModalVisible)}/>
+            <CalendarModal
+                onSubmit={onSubmitApply}
+                isVisible={isModalVisible}
+                onDismiss={() => setIsModalVisible(!isModalVisible)} />
         </>
     )
 }
