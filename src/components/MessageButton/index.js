@@ -2,16 +2,12 @@ import React from 'react';
 import { View, Image, TouchableOpacity, Alert } from 'react-native';
 import style from './style';
 
-function MessageButton(){
+function MessageButton({onPress}){
     const imgSrc = require('../../../assets/img/chat.png');
-
-    function onTouch(){
-        Alert.alert("Mensagens.", "Visualizar mensagens.");
-    }
 
     return (
         <TouchableOpacity 
-        onPress={onTouch}
+        onPress={onPress}
         activeOpacity={0.8} 
         style={style.container}>
             <Image source={imgSrc} style={style.img}/>

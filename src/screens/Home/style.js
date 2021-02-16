@@ -16,7 +16,7 @@ export default StyleSheet.create({
         padding: 20,
         width: '50%',
         height: '100%',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     title: {
         fontWeight: 'bold',
@@ -27,5 +27,29 @@ export default StyleSheet.create({
     subTitle: {
         fontSize: 14,
         color: '#FFF'
+    },
+    sectionContainer: {
+        marginTop: 15
+    },
+    section: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
+    sectionTitle: {
+        fontSize: 16,
+        fontWeight: '500',
+        color: 'gray'
+    },
+    sectionSelected: {
+        color: 'dimgray',
+        fontWeight: 'bold'
+    },
+    sectionContent: {
+        padding: 20,
+        alignItems: 'center'
+    },
+    emptyMessage: {
+        color: 'gray',
+        fontSize: 16
     }
 })
