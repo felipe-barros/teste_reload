@@ -24,5 +24,12 @@ export default StyleSheet.create({
     },
     calendarContainer: {
         marginBottom: 10
+    },
+    dateContainer: {
+        marginTop: 10
+    },
+    dateText: {
+        fontSize: 14,
+        textAlign: 'center'
     }
 });
